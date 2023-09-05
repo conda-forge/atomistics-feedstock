@@ -43,6 +43,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - pmrv
     - srmnitc
     - pyiron-runner
     - jan-janssen
