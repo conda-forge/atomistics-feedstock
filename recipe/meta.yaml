@@ -1,5 +1,5 @@
 {% set name = "atomistics" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/atomistics-{{ version }}.tar.gz
-  sha256: a5290f61881fc13fb305dc40e99870e2f451b760de6bb6127d475c7cdd4b0290
+  sha256: fcc4b5623c6603e75180e6bb810beeb2477f247134602b4f9c3cea3320d2ff10
 
 build:
   noarch: python
