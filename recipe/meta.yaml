@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/atomistics-{{ version }}.tar.gz
   sha256: 90aa11ea109a3f1de9e822c99be200dbbdadaec435fa4114d7288a6401ef309f
+  patches: 
+    - phonopy.patch
 
 build:
   noarch: python
