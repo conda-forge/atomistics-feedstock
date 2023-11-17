@@ -1,0 +1,29 @@
+From 42d73522b5c2cc753b6049556f8f2468788f9831 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <janssen@mpie.de>
+Date: Fri, 17 Nov 2023 12:42:20 +0100
+Subject: [PATCH] Fix when phonopy is not installed
+
+---
+ atomistics/workflows/__init__.py | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/atomistics/workflows/__init__.py b/atomistics/workflows/__init__.py
+index 63d0a63..1775358 100644
+--- a/atomistics/workflows/__init__.py
++++ b/atomistics/workflows/__init__.py
+@@ -1,9 +1,13 @@
+ from atomistics.workflows.elastic.workflow import ElasticMatrixWorkflow
+ from atomistics.workflows.evcurve.workflow import EnergyVolumeCurveWorkflow
+ from atomistics.workflows.langevin.workflow import LangevinWorkflow
+-from atomistics.workflows.phonons.workflow import PhonopyWorkflow
+-from atomistics.workflows.quasiharmonic.workflow import QuasiHarmonicWorkflow
+ from atomistics.workflows.structure_optimization.workflow import (
+     optimize_positions,
+     optimize_positions_and_volume,
+ )
++
++try:  # in case phonopy is not installed
++    from atomistics.workflows.phonons.workflow import PhonopyWorkflow
++    from atomistics.workflows.quasiharmonic.workflow import QuasiHarmonicWorkflow
++except ImportError:
++    pass
