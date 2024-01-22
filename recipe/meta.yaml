@@ -1,5 +1,5 @@
 {% set name = "atomistics" %}
-{% set version = "0.1.20" %}
+{% set version = "0.1.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/atomistics-{{ version }}.tar.gz
-  sha256: 32242110c04f837373b74a3b9eed6150e3139000bacaa9be509a40ff03e0294f
+  sha256: c21ce4ce997f969ca91104bdd113302e0c9df179700de2843d9e5dfdf7b142e5
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - python >=3.7
     - ase ==3.22.1
     - numpy >=1.23.5,<=1.26.3
-    - scipy >=1.11.1,<=1.11.4
+    - scipy >=1.11.1,<=1.12.0
     - spglib >=2.0.2,<=2.2.0
 
 test:
