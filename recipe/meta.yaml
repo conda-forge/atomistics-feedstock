@@ -1,5 +1,5 @@
 {% set name = "atomistics" %}
-{% set version = "0.1.23" %}
+{% set version = "0.1.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/atomistics-{{ version }}.tar.gz
-  sha256: ccca8bc242720714f99864aed33fa6f1b13b666c5d0fbac84470a3c6d8fbe578
+  sha256: 10336311db5829964f5d613a3dceca24523f78cacd91e3f15b6cfdec703f3c4a
 
 build:
   noarch: python
@@ -47,7 +47,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - niklassiemer
     - pmrv
     - srmnitc
     - pyiron-runner
