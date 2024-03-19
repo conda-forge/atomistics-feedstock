@@ -47,7 +47,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - niklassiemer
     - pmrv
     - srmnitc
     - pyiron-runner
