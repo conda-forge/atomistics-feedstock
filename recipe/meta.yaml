@@ -1,5 +1,5 @@
 {% set name = "atomistics" %}
-{% set version = "0.1.28" %}
+{% set version = "0.1.29" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/atomistics-{{ version }}.tar.gz
-  sha256: ccee2445d05602f2d1104f4f8a664b89291fb8d1fa7598bfb9d389804123aaec
-  patches:
-    - phonolammps.patch
+  sha256: 88c475dd082302ac8257c2a816857bf269936692f7883c47126e3a957683f0ae
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -28,7 +26,7 @@ requirements:
     - toml
   run:
     - python >=3.9,<3.13
-    - ase ==3.22.1
+    - ase >=3.22.1,<=3.23.0
     - numpy >=1.23.5,<=1.26.4
     - scipy >=1.11.1,<=1.13.1
     - spglib >=2.0.2,<=2.4.0
