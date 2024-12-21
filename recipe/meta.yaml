@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/atomistics-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/atomistics-{{ version }}.tar.gz
   sha256: e4cb9c88956cded9006ac56b13e0570d861bcf939e0f2a31d35aa65c90656408
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<3.13
+    - python {{ python_min }}
     - pip
     - ase
     - numpy
@@ -25,7 +25,7 @@ requirements:
     - versioneer
     - toml
   run:
-    - python >=3.9,<3.13
+    - python >={{ python_min }},<3.13
     - ase >=3.22.1,<=3.23.0
     - numpy >=1.23.5,<=1.26.4
     - scipy >=1.11.1,<=1.14.1
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyiron/atomistics
