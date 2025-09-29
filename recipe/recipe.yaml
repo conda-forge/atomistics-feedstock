@@ -27,8 +27,8 @@ requirements:
     - numpy
     - scipy
     - spglib
-    - versioneer
-    - toml
+    - hatchling
+    - hatch-vcs
     - setuptools
   run:
     - python >=${{ python_min }},<3.13
