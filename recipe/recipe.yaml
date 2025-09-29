@@ -29,7 +29,6 @@ requirements:
     - spglib
     - hatchling
     - hatch-vcs
-    - setuptools
   run:
     - python >=${{ python_min }},<3.13
     - ase >=3.23.0,<=3.26.0
