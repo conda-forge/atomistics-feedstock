@@ -11,9 +11,11 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/atomistics-${{ version }}.tar.gz
   sha256: 088290618756440eb9d8babace34680b118ddf2457639d98557ea0aa1433c4f9
+  patches:
+    - scipy.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
