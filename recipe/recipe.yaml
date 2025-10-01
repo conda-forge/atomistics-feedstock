@@ -16,7 +16,7 @@ source:
     - py313.patch
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -31,7 +31,7 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - python >=${{ python_min }},<3.13
+    - python >=${{ python_min }}
     - ase >=3.23.0,<=3.26.0
     - numpy >=1.26.4,<=2.3.3
     - scipy >=1.11.1,<=1.16.2
