@@ -13,9 +13,10 @@ source:
   sha256: 088290618756440eb9d8babace34680b118ddf2457639d98557ea0aa1433c4f9
   patches:
     - scipy.patch
+    - py313.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
