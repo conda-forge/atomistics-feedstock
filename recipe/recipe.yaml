@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: atomistics
-  version: "0.3.0"
+  version: "0.3.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/atomistics-${{ version }}.tar.gz
-  sha256: 088290618756440eb9d8babace34680b118ddf2457639d98557ea0aa1433c4f9
+  sha256: 4931239d97bebb35e643197ab1cdf89cc4070df8b9b89d3d11951c7a3932ab31
   patches:
     - scipy.patch
     - py313.patch
