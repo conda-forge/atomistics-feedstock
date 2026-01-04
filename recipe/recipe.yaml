@@ -29,10 +29,10 @@ requirements:
     - hatch-vcs
   run:
     - python >=${{ python_min }}
-    - ase >=3.23.0,<=3.26.0
+    - ase >=3.23.0,<=3.27.0
     - numpy >=1.26.4,<=2.3.5
     - scipy >=1.11.1,<=1.16.3
-    - spglib >=2.0.2,<=2.6.0
+    - spglib >=2.0.2,<=2.7.0
 
 tests:
   - python:
