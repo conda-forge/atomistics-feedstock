@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: atomistics
-  version: "0.3.9"
+  version: "0.3.10"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/atomistics-${{ version }}.tar.gz
-  sha256: 7a21716541b2c1b5a24ffd8d1303c1caab34aeb02ff8e755a632241cc8cee709
+  sha256: 61556418fd629f20c23c09b548b6bea3accec82eb9f517e6834f59cfcd4fe9b1
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - python >=${{ python_min }}
     - ase >=3.23.0,<=3.29.0
     - numpy >=1.26.4,<=2.5.3
-    - scipy >=1.11.1,<=1.18.0
+    - scipy >=1.11.1,<=1.18.1
     - spglib >=2.0.2,<=2.7.0
 
 tests:
