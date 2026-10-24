@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: atomistics
-  version: "0.3.10"
+  version: 0.4.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/atomistics-${{ version }}.tar.gz
-  sha256: 61556418fd629f20c23c09b548b6bea3accec82eb9f517e6834f59cfcd4fe9b1
+  sha256: 9d9ceb188e1ad6ab3c6e700550eab5591892ce1f0944b2161b66b7aadd2c950c
 
 build:
   number: 0
@@ -29,11 +29,10 @@ requirements:
     - hatch-vcs
   run:
     - python >=${{ python_min }}
-    - ase >=3.23.0,<=3.29.0
-    - numpy >=1.26.4,<=2.5.3
-    - scipy >=1.11.1,<=1.18.1
-    - spglib >=2.0.2,<=2.7.0
-
+    - ase >=3.23.0,<3.30.0
+    - numpy >=1.26.4,<2.6.0
+    - scipy >=1.11.2,<1.19.0
+    - spglib >=2.0.2,<2.8.0
 tests:
   - python:
       imports:
@@ -41,7 +40,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   summary: atomistics - materials science workgflows to calculate material properties
